@@ -1,29 +1,31 @@
--_- llvm/utils/emacs/README -_-
+#+title: llvm/utils/emacs
 
-- llvm-mode - Major mode for editing LLVM IR files
-  DISCLAIMER: This is an the files from the official llvm-project. I reate this to avoid clone the whole monorepo in order to use its emacs major mode.
+* DISCLAIMER
+These are all the files from the official LLVM project. I create this to avoid cloning the whole monorepo in order to use its emacs major modes.
 
+* llvm-mode - Major mode for editing LLVM IR files
 These are syntax highlighting files for the Emacs and XEmacs editors. Included
 are:
 
 - llvm-mode.el
 
   Syntax highlighting mode for LLVM assembly files. To use, add this code to
-  your ~/.emacs :
-
+  your =~/.emacs= :
+#+begin_src emacs-lisp
   (setq load-path
   (cons (expand-file-name "path-to-llvm/utils/emacs") load-path))
   (require 'llvm-mode)
+#+end_src
 
 - tablegen-mode.el
 
   Syntax highlighting mode for TableGen description files. To use, add this code
   to your ~/.emacs:
-
+#+begin_src emacs-lisp
   (setq load-path
   (cons (expand-file-name "path-to-llvm/utils/emacs") load-path))
   (require 'tablegen-mode)
-
+#+end_src
 Note: If you notice missing or incorrect syntax highlighting, please contact
 <llvm-bugs [at] lists.llvm.org>; if you wish to provide a patch to improve the
 functionality, it will be most appreciated. Thank you.
